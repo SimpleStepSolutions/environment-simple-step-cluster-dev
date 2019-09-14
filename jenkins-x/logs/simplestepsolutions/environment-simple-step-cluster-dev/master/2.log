@@ -1,0 +1,70 @@
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-lcxl4[0m
+{"level":"warn","ts":1568487059.5075095,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568487059.5098062,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-68xdw[0m
+{"level":"warn","ts":1568487060.802575,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568487060.8040214,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-simplestepsolutions-enviro-zfxmc[0m
+{"level":"warn","ts":1568487078.5623126,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568487078.853854,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/simplestepsolutions/environment-simple-step-cluster-dev.git @ master in path /workspace/source"}
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: ** step next-version --use-git-tag-only --tag
+created new version: 1.0.20 and written to file: ./VERSION
+Updating chart version in systems/acme/Chart.yaml to 1.0.20
+Tag v1.0.20 created and pushed to remote origin
+
+PipelineActivity for simplestepsolutions-environment-simple-step-cluster-dev-master-2
+Applying changes 
+upserted PipelineResource simplestepsolutions-environment for the git repository https://github.com/simplestepsolutions/environment-simple-step-cluster-dev.git
+upserted Task simplestepsolutions-environment-ngnl6-release-2
+upserted Pipeline simplestepsolutions-environment-ngnl6-2
+created PipelineRun simplestepsolutions-environment-ngnl6-2
+created PipelineStructure simplestepsolutions-environment-ngnl6-2
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mrelease[0m and container [32mstep-credential-initializer-cz98n[0m
+{"level":"warn","ts":1568487087.8570426,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568487087.8579507,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-kwrmh[0m
+{"level":"warn","ts":1568487088.9122732,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568487088.915486,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env /workspace/source/prowConfig /workspace/source/repositories /workspace/source/systems/acme /workspace/source/systems/cm /workspace/source/systems/external-dns /workspace/source/systems/**ing /workspace/source/systems/vault\""}
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mrelease[0m and container [32mstep-git-source-simplestepsolutions-environment-kjf4n[0m
+{"level":"warn","ts":1568487164.9629173,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568487165.268528,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/simplestepsolutions/environment-simple-step-cluster-dev.git @ v1.0.20 in path /workspace/source"}
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Git configured for user: jenkins-x and email jenkins-x@googlegroups.com
+
+Showing logs for build [32msimplestepsolutions-environment-ngnl6-2[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+error: Validation failures in YAML file /workspace/source/**-requirements.yml:
+(root): Additional property autoUpdate is not allowed
+(root): Additional property vault is not allowed
+ingress: Additional property cloud_dns_secret_name is not allowed
+cluster: Additional property environmentGitPublic is not allowed
+[31m
+Pipeline failed on stage 'release' : container 'step-verify-preinstall'. The execution of the pipeline has stopped.[0m
