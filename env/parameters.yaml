@@ -1,0 +1,10 @@
+adminUser:
+  password: local:simple-step-cluster/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: stephen@simplestep.ca
+  token: local:simple-step-cluster/pipelineUser:token
+  username: jenkinsx-bot-sss
+prow:
+  hmacToken: local:simple-step-cluster/prow:hmacToken
